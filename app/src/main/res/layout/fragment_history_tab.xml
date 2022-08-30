@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHistory"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+
+    <ImageView
+        android:id="@+id/ivNoData"
+        android:layout_width="@dimen/width_120"
+        android:layout_height="@dimen/width_120"
+        android:layout_above="@+id/llNoData"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_20"
+
+        />
+
+    <RelativeLayout
+        android:id="@+id/llNoData"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_90"
+        android:background="@drawable/cardview_border_blue"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNoDataHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_20"
+                android:gravity="center"
+                android:text="No accidents recorded"
+                android:textColor="@color/app_blue_trans50"
+                android:textSize="@dimen/text_size_20" />
+
+            <TextView
+                android:id="@+id/tvRecord"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="If you see anyone plz press the plus button to record it"
+                android:textColor="@color/app_blue"
+                android:textSize="@dimen/text_size_16" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginRight="@dimen/margin_16"
+        android:src="@drawable/ic_plus"
+        app:backgroundTint="@color/app_blue"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp" />
+
+</RelativeLayout>

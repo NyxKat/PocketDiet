@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_80"
+    android:background="@color/transparent">
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/tvDate"
+        android:layout_width="@dimen/height_120"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Nov 1st"
+        android:textColor="@color/app_darker_blue"
+        android:textSize="@dimen/text_size_20"
+        android:singleLine="true"
+        android:maxLines="1"
+        />
+
+    <View
+        android:id="@+id/vertical_line"
+        android:layout_width="0.75dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_toRightOf="@+id/tvDate"
+        android:background="@color/app_blue" />
+
+    <ImageView
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:id="@+id/ivLeftArrow"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_3"
+        android:layout_toRightOf="@+id/vertical_line"
+        android:src="@drawable/arrow_left_blue"
+        />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pager"
+        android:layout_toRightOf="@+id/ivLeftArrow"
+        android:layout_toLeftOf="@+id/ivRightArrow"
+        />
+
+
+
+    <ImageView
+        android:layout_width="@dimen/size_24"
+        android:layout_height="@dimen/size_24"
+        android:id="@+id/ivRightArrow"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_3"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/arrow_right_blue"
+        />
+
+</RelativeLayout>
+
+
+
+
+
+

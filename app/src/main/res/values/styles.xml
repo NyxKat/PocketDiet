@@ -1,0 +1,86 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#629cb1</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme.ActionBar.TransparentBlueGray" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/blue_gray_trans40</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+
+    <style name="AppTheme.ActionBar.Blue" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/app_blue</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+
+    <style name="AppTheme.ActionBar.Purple" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/app_purple</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.Green" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/app_green</item>
+        <item name="windowActionBarOverlay">true</item>
+    </style>
+
+
+
+    <style name="AppTheme.ActionBar.Transparent" parent="Theme.AppCompat.Light">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorPrimary">@color/transparent</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+
+    <style name="CustomAutoCompleteTextview" >
+        <item name="android:textColorHint">@color/white_trans75</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:ems">10</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+    <style name="MyCustomBetterPickersDialogs" parent="BetterPickersRadialTimePickerDialog.PrimaryColor">
+        <item name="bpPreHeaderBackgroundColor">@color/app_purple</item>
+        <item name="bpHeaderBackgroundColor">@color/app_purple</item>
+        <item name="bpHeaderSelectedTextColor">@color/white</item>
+        <item name="bpHeaderUnselectedTextColor">@color/white_trans35</item>
+
+        <item name="bpBodyBackgroundColor">@color/white_trans35</item>
+        <item name="bpBodySelectedTextColor">@color/red</item>
+        <item name="bpBodyUnselectedTextColor">@color/green</item>
+
+        <item name="bpRadialBackgroundColor">@color/app_gray</item>
+        <item name="bpRadialTextColor">@color/white</item>
+        <item name="bpRadialPointerColor">@color/app_purple</item>
+
+        <item name="bpButtonsBackgroundColor">@color/app_purple</item>
+        <item name="bpButtonsTextColor">@color/white</item>
+    </style>
+
+
+
+</resources>

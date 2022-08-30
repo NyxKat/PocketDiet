@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.ActionBar.Purple">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <FrameLayout
+                    android:id="@+id/flNutrition"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/margin_20" />
+
+                <TextView
+                    android:id="@+id/tvHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/flNutrition"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:gravity="center"
+                    android:text="Today's meals"
+                    android:textColor="@color/app_gray"
+                    android:textSize="@dimen/text_size_20" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/rivNutrition"
+                    android:layout_width="@dimen/width_120"
+                    android:layout_height="@dimen/width_120"
+                    android:layout_below="@id/tvHeader"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/ic_overview_nutrition"
+                    />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvFoodSelection"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_100"
+                    android:layout_below="@+id/rivNutrition"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_40"
+                    app:cardBackgroundColor="@color/app_purple"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/tvSelectionHeader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="Select meal type"
+                            android:textColor="@color/app_gray"
+                            android:textSize="@dimen/text_size_18" />
+
+
+
+
+
+                        <com.tiper.MaterialSpinner
+                            android:id="@+id/sSelectionMeals"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/tvSelectionHeader"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/app_gray"
+                            app:boxBackgroundColor="@color/white"
+                            app:spinnerMode="dropdown"
+
+                            />
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvMeal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_80"
+                    android:layout_below="@+id/cvFoodSelection"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_40"
+                    app:cardBackgroundColor="@color/app_purple"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/tvMealHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Meal"
+                            android:textColor="@color/app_gray"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <AutoCompleteTextView
+                            android:id="@+id/etFood"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvMealHeader"
+                            android:layout_marginLeft="@dimen/margin_20"
+                            android:layout_marginRight="@dimen/margin_20"
+                            android:gravity="center"
+                            android:hint="e.g. spaghetti"
+                            android:inputType="textMultiLine"
+                            android:lines="2"
+                            android:maxLines="2"
+                            android:minLines="2"
+                            android:scrollbars="vertical"
+                            android:scrollHorizontally="false"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_16"
+                            android:theme="@style/CustomAutoCompleteTextview" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvExtra"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_200"
+                    android:layout_below="@+id/cvMeal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_40"
+                    app:cardBackgroundColor="@color/app_purple"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="2dp"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <TextView
+                            android:id="@+id/tvExtraHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Extras"
+                            android:textColor="@color/app_gray"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <LinearLayout
+                            android:id="@+id/llBread"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvExtraHeader"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvBreadHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Bread"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etBread"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g 2 slices"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etSalad"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llSalad"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llBread"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvSaladHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Salad"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etSalad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g Green salad"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etSweet"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llSweet"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llSalad"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvSweetHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Dessert"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_14" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etSweet"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g profiterole"
+                                android:inputType="number"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_16"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCalories"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_200"
+                    android:layout_below="@+id/cvExtra"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginTop="@dimen/margin_15"
+                    android:layout_marginRight="@dimen/margin_40"
+                    app:cardBackgroundColor="@color/app_purple"
+                    app:cardCornerRadius="5dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/tvCaloriesHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Calories"
+                            android:textColor="@color/app_gray"
+                            android:textSize="@dimen/text_size_18" />
+
+
+                        <LinearLayout
+                            android:id="@+id/llTotalCalories"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvCaloriesHeader"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvTotalCaloriesHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Avg Calories"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etCalories"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g 108 Cal"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etSalad"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llCarbs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llTotalCalories"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvCarbsHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Carbs"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etCarbs"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g 26g"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etSalad"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llFat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llCarbs"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvFatHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Fat"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etFat"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g 20g"
+                                android:inputType="number"
+                                android:nextFocusDown="@+id/etSweet"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/llProtein"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/llFat"
+                            android:layout_marginLeft="@dimen/margin_15"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:background="@color/app_purple_little_darker_trans20"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/tvProteinHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.6"
+                                android:gravity="center"
+                                android:text="Protein"
+                                android:textColor="@color/app_gray"
+                                android:textSize="@dimen/text_size_16" />
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etProtein"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_10"
+                                android:layout_marginRight="@dimen/margin_10"
+                                android:layout_weight="0.4"
+                                android:gravity="center"
+                                android:hint="e.g 1g"
+                                android:inputType="number"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_14"
+                                android:theme="@style/CustomAutoCompleteTextview" />
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:id="@+id/llIvButtons"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cvCalories"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+
+                    <ImageButton
+                        android:id="@+id/ibTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_13"
+                        android:layout_weight="0.5"
+                        android:background="@color/transparent"
+                        app:srcCompat="@drawable/ic_clock" />
+
+
+                    <ImageButton
+                        android:id="@+id/ibDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:layout_marginLeft="@dimen/margin_13"
+                        android:background="@color/transparent"
+                        app:srcCompat="@drawable/ic_calendar"
+
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llTexts"
+                    android:layout_width="@dimen/width_180"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/llIvButtons"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:padding="5dp"
+                    android:weightSum="1">
+
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/tvTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_13"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:textColor="@color/app_gray"
+                        android:textSize="@dimen/text_size_14"
+
+                        />
+
+                    <me.grantland.widget.AutofitTextView
+                        android:id="@+id/tvDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_13"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/app_gray"
+                        android:textSize="@dimen/text_size_14" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</RelativeLayout>

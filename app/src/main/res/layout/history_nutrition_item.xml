@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/rlTimeAndMeal"
+        android:layout_toRightOf="@+id/vertical_line"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvMealNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1st meal"
+                android:textColor="@color/app_gray"
+                android:textSize="@dimen/text_size_13" />
+
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="8:30"
+                android:textColor="@color/app_blue"
+                android:textSize="@dimen/text_size_20" />
+
+
+            <TextView
+                android:id="@+id/tvMealQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3 gr"
+                android:textColor="@color/app_darker_blue"
+                android:textSize="@dimen/text_size_12"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tvMeal"
+        android:layout_toRightOf="@+id/rlTimeAndMeal"
+        android:text="dadadad adad a"
+        android:textColor="@color/app_green"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18"
+        />
+
+</RelativeLayout>

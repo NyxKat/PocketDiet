@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_grey">#303030</color>
+    <color name="light_grey">#EEEEEE</color>
+    <color name="white_smoke">#f5f5f5</color>
+    <color name="lighter_gray">#ececec</color>
+
+    <color name="indigo">#3f51b5</color>
+    <color name="indigo_light">#7986cb</color>
+
+    <color name="cyan">#00BCD4</color>
+    <color name="cyan_light">#4DD0E1</color>
+
+    <color name="blue">#1565C0</color>
+    <color name="blue_lighter">#2196F3</color>
+
+    <color name="green">#00E528</color>
+    <color name="orange">#FFA000</color>
+    <color name="red">#d32f2f</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparent_65">#A6FFFFFF</color>
+    <color name="trasparent_100">#00ffffff</color>
+
+    <integer-array name="colors">
+        <item>@color/red</item>
+        <item>@color/cyan_light</item>
+        <item>@color/green</item>
+        <item>@color/blue</item>
+    </integer-array>
+
+    <color name="app_light_green">#98fb98</color>
+    <!--<color name="app_green">#00F74B</color>-->
+    <color name="app_darker_blue">#0030F5</color>
+    <color name="app_blue_trans50">#8000bff3</color>
+    <color name="app_blue">#00bff3</color>
+    <color name="app_blue_lighter">#ace0ef</color>
+    <color name="app_blue_darker">#077082</color>
+    <color name="app_blue_trans20">#3300bff3</color>
+    <color name="gray">#9ea09b</color>
+    <color name="gray_darker_trans40">#66838885</color>
+    <color name="gray_darker">#838885</color>
+    <color name="white_trans75">#BFffffff</color>
+    <color name="white_trans35">#59ffffff</color>
+    <color name="white_trans50">#80ffffff</color>
+    <color name="blue_gray">#394041</color>
+    <color name="blue_gray_trans40">#66394041</color>
+    <color name="blue_gray_trans20">#33394041</color>
+    <color name="test">#178fad</color>
+    <color name="app_gray_light">#cae5ed</color>
+    <color name="app_gray_light_trans75">#BFcae5ed</color>
+    <!--<color name="app_gray">#668388</color>-->
+    <color name="white_trans85">#D9ffffff</color>
+
+    <color name="calendar_red">#ffe95451</color>
+
+    <color name="bmi_first_level_red">#f26161</color>
+    <color name="bmi_second_level_red">#f03939</color>
+    <color name="bmi_third_level_red">#ea0909</color>
+    <color name="bmi_fourth_level_red">#9a0707</color>
+
+    <color name="app_light_gray">#fafafa</color>
+
+
+    <color name="app_red">#D84C6D</color>
+    <color name="app_green">#21D8A8</color>
+    <color name="app_orange">#E25A40</color>
+    <color name="app_cyan">#20BDD9</color>
+    <color name="app_gray">#3F3F3F</color>
+    <color name="app_gray_darker">#323232</color>
+    <color name="app_yellow">#F9E35F</color>
+    <color name="app_purple">#F061FF</color>
+    <color name="app_purple_little_darker_trans20">#33C04DCC</color>
+    <color name="app_purple_darker">#602666</color>
+    <color name="app_white_shades1">#e5e1d9</color>
+
+
+</resources>
